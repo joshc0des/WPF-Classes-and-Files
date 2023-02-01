@@ -7,6 +7,23 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <ListBox x:Name="lstToys" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="491,0,0,0" SelectionChanged="lstToys_SelectionChanged" MouseDoubleClick="lstToys_MouseDoubleClick"/>
+        
+        <Image x:Name="imageControl" HorizontalAlignment="Left" Height="185" Margin="149,217,0,0" VerticalAlignment="Top" Width="186"/>
+       
+        <TextBox x:Name="txtMan" HorizontalAlignment="Left" Margin="108,30,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Manufacturer&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,26,0,0" VerticalAlignment="Top"/>
+        
+        <TextBox x:Name="txtNam" HorizontalAlignment="Left" Margin="108,56,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Name" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top"/>
+    
+        <TextBox x:Name="txtPri" HorizontalAlignment="Left" Margin="108,82,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Price" HorizontalAlignment="Left" Margin="10,78,0,0" VerticalAlignment="Top"/>
+    
+        <TextBox x:Name="txtImg" HorizontalAlignment="Left" Margin="108,108,0,0" TextWrapping="NoWrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Image URL&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,104,0,0" VerticalAlignment="Top"/>
+   
+        <Button x:Name="subButton" Content="Submit" HorizontalAlignment="Left" Margin="121,140,0,0" VerticalAlignment="Top" Height="19" Width="93" Click="subButton_Click"/>
 
     </Grid>
 </Window>

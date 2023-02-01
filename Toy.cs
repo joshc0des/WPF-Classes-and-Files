@@ -21,7 +21,8 @@
         {
             string manuf = Manufacturer.Substring(0, 1).ToUpper();
             string pri = Price.ToString().Replace(".", "");
-            string outstr = manuf + pri;
+            string outstr = $"Aisle:\n{manuf}{pri}";
+
 
             return outstr;
         }

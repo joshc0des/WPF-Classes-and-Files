@@ -67,13 +67,27 @@ namespace WPF_Classes_and_Files
 
         private void subButton_Click(object sender, RoutedEventArgs e)
         {
-            Toy t = new Toy();
-            t.Manufacturer = txtMan.Text;
-            t.Name = txtNam.Text;
-            t.Price = Convert.ToDouble(txtPri.Text);
-            t.Image = txtImg.Text;
+            if (!string.IsNullOrEmpty(txtMan.Text) &&
+                !string.IsNullOrEmpty(txtNam.Text) &&
+                !string.IsNullOrEmpty(txtImg.Text) &&
+                double.TryParse(txtPri.Text, out double pri))
+            {
+                Toy t = new Toy();
+                t.Manufacturer = txtMan.Text;
+                t.Name = txtNam.Text;
+                t.Price = pri;
+                t.Image = txtImg.Text;
 
-            lstToys.Items.Add(t);
+                lstToys.Items.Add(t);
+
+                txtMan.Text = string.Empty;
+                txtNam.Text = string.Empty;
+                txtPri.Text = string.Empty;
+                txtImg.Text = string.Empty;
+            } else
+            {
+                MessageBox.Show("Invalid input (missing or wrong type of input)");
+            }
         }
     }
 }

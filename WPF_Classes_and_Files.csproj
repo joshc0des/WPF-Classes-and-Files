@@ -8,6 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="mainBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="mainBackground.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="Toys.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
